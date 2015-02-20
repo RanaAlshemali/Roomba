@@ -18,7 +18,7 @@ public class Romba {
 	}
 
 	public static void main(String args[]) {
-		new Romba();
+		new Romba();// instatiates entire window class, creating window here
 	}
 
 
