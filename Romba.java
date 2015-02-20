@@ -2,7 +2,7 @@ import javax.swing.JFrame;
 
 public class Romba {
 
-	static final int WIDTH = 1400, HIGHTS = 900;
+	static final int WIDTH = 1400, HIGHTS = 900; //dimensions are established here
 	 		RombaComponent rombacomponent;
 
 	public Romba() {
