@@ -4,12 +4,12 @@ import java.awt.event.MouseListener;
 
 import javax.swing.ImageIcon;
 
-public class RoombaMouseListener implements MouseListener, Runnable {
-	int ix, iy, fx, fy;
-	int disX, disY;
+public class RoombaMouseListener implements MouseListener, Runnable {// this function will have the roomba react to the mouse
+	int ix, iy, fx, fy;// variables for mouse and roomba
+	int disX, disY;// variables for distance
 	
-	Image trash = new ImageIcon("trash.png").getImage();
-	Romba romba;
+	Image trash = new ImageIcon("trash.png").getImage();// creates trash image
+	Romba romba; //makes roomba
 	Boolean click = false;
 	int i = 100;
 	int Tx = 1100, Ty = 0, Rx = 100, Ry = 100;
@@ -20,7 +20,7 @@ public class RoombaMouseListener implements MouseListener, Runnable {
 	}
 
 	@Override
-	public void mouseClicked(MouseEvent e) {
+	public void mouseClicked(MouseEvent e) {// this function would register mouse clicks
 		// TODO Auto-generated method stub
 
 		/*
@@ -49,15 +49,15 @@ public class RoombaMouseListener implements MouseListener, Runnable {
 	}
 
 	@Override
-	public void mousePressed(MouseEvent e) {
+	public void mousePressed(MouseEvent e) {// this function registers mouse clicks
 		click = false;
 		// TODO Auto-generated method stub
 		ix = e.getX();
-		System.out.println("X = " + ix);
+		System.out.println("X = " + ix);//shows X coor
 		iy = e.getY();
-		System.out.println("Y = " + iy);
+		System.out.println("Y = " + iy);//shows Y coor
 
-		if ((ix >= 1100 && ix < 1200) && (iy >= 0 && iy < 100)) {
+		if ((ix >= 1100 && ix < 1200) && (iy >= 0 && iy < 100)) {// registers if a click is in the box or not
 			//System.out.println("Inn");
 			click = true;
 		}
@@ -77,7 +77,7 @@ Ty=fy;
 			//Ty = Ty * 100;
 			romba.rombacomponent.paintImmediately(0, 0, 1200, 900);
 			// DON'T FORGET TO DELET PREC. POSITION !!!!!!!!!!!!
-			romba.grid[Tx / 100][Ty / 100].value = 5;
+			romba.grid[Tx / 100][Ty / 100].value = 5;// gives trash value
 			System.out.println("In release");
 			System.out.println("Array Pos."+ Tx/100+" AND "+ Ty/100+ " Value "+romba.grid[Tx / 100][Ty / 100].value);
 		
@@ -87,18 +87,18 @@ Ty=fy;
 			//Rx = Rx * 100;
 			//Ry = fy / 100;
 			//Ry = Ry * 100;
-			romba.grid[Tx / 100][Ty / 100].value = 0;
+			romba.grid[Tx / 100][Ty / 100].value = 0;// places trash at click re
 			System.out.println("Array Pos."+ Tx/100+" AND "+ Ty/100+ " Value "+romba.grid[Tx / 100][Ty / 100].value);
 			
 		//	romba.rombacomponent.paintImmediately(0, 0, 1200, 900);
 		//	romba.rombacomponent.paintImmediately(0, 0, 1200, 900);
 			
 
-			while (Rx != Tx || Ry != Ty) {
-				System.out.println("Rx= "+ Rx+ " Ry "+Ry+  "Tx= "+ Tx+ " Ty "+Ty);
+			while (Rx != Tx || Ry != Ty) {// while  the roomba hasn't reached trash
+				System.out.println("Rx= "+ Rx+ " Ry "+Ry+  "Tx= "+ Tx+ " Ty "+Ty);//prints trash and roomba position
 				
-					if (Rx != Tx && Ry != Ty) {
-					disX= (int)((Tx-Rx)/ Math.abs(Tx-Rx));
+					if (Rx != Tx && Ry != Ty) {// while  the roomba hasn't reached trash
+					disX= (int)((Tx-Rx)/ Math.abs(Tx-Rx));// roomba essentially reaches trash
 					disY = (int)((Ty-Ry)/ Math.abs(Ty-Ry));
 					Rx=Rx+disX;
 					Ry= Ry+disY;
@@ -113,7 +113,7 @@ Ty=fy;
 					romba.rombacomponent.paintImmediately(0, 0, 1200, 900);
 				}
 			}
-			if(Rx == Tx && Ry == Ty){
+			if(Rx == Tx && Ry == Ty){// when it reaches trash it stops
 			Tx = 1100;
 			Ty = 0;
 			romba.rombacomponent.paintImmediately(0, 0, 1200, 900);
