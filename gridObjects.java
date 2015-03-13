@@ -1,10 +1,6 @@
-import java.awt.Graphics;
-
-
-public  class gridObjects {// prepares heirchy
-int pathCost, herCost,value;
-
-public void draw(Graphics g){
-	
-}
+public  class gridObjects {
+		 	// values of each grid in the 2D Array
+	double pathCost,// g value
+	       herCost, // h value
+	       totalCost; // f value
 }
