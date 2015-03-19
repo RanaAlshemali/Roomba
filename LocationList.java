@@ -9,6 +9,6 @@ public class LocationList {
 	   	this.path = path;
 	  	this.parentX = parentX;
 	  	this.parentY = parentY;
-  		this.totalCost = totalCost; // f = g + h
+  		this.totalCost = totalCost; // f = goal + heuristic
 	}
 }
