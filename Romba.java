@@ -1,5 +1,5 @@
 import javax.swing.JFrame;
-
+// this public class creates the window of the roomba project, the mouse listener, and creates and populates a grid
 public class Romba {
 
 	static final int WIDTH = 1218, HIGHTS = 947; 	// size of window (with borders it is 1400,900)
