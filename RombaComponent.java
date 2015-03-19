@@ -2,7 +2,8 @@ import java.awt.Graphics;
 import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JComponent;
-
+/*this class uses RombaComponent to place the png files on the grid
+and in the window. Pictures were created and resized by Dele Amon*/
 public class RombaComponent extends JComponent {
 	Romba romba;
 	
