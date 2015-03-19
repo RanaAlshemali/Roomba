@@ -8,6 +8,6 @@ download the roomba zip file, make sure all the pictures are in the same folder 
 
 **HOW TO USE** 
 
-drag the trash from the top right box and place it anywhere on the wooden floor
+Drag the trash from the top right box and place it anywhere on the wooden floor.
 the code will register trash dropped on th furnature.
-once the trash is dropped , the roomba will take the shortest path to the trash and will not move until new trash is dropped.
+Once the trash is dropped , the roomba will take the shortest path to the trash and will not move until new trash is dropped.
